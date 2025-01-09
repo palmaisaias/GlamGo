@@ -1,57 +1,60 @@
 // src/components/Navbar.jsx
 
-import React, { useState } from "react";
+import React from "react";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
-import "./Navbar.css"; // Import the CSS file
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  // Toggle menu open/close state
-  const toggleMenu = () => {
-    setIsOpen((prevState) => !prevState);
-  };
-
+const BootstrapNavbar = () => {
   return (
-    <nav className="navbar">
-      {/* Logo Section */}
-      <div className="logo">
-        <Link to="/landing" style={{ textDecoration: "none", color: "#000" }}>
+    <Navbar bg="light" expand="lg" fixed="top">
+      <Container>
+        {/* Logo */}
+        <Navbar.Brand as={Link} to="/landing" className="fw-bold fs-1 fs-md-2 fs-lg-3 fs-xl-4">
           LashTech
-        </Link>
-      </div>
+        </Navbar.Brand>
 
-      {/* Hamburger Icon */}
-      <div className="menuIcon" onClick={toggleMenu}>
-        {isOpen ? <FaTimes /> : <FaBars />}
-      </div>
+        {/* Hamburger Icon for Collapsible Menu */}
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-      {/* Navigation Links */}
-      <ul className={`navLinks ${isOpen ? "open" : ""}`}>
-        <li>
-          <Link to="/landing" className="link" onClick={() => setIsOpen(false)}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/book" className="link" onClick={() => setIsOpen(false)}>
-            Book Now
-          </Link>
-        </li>
-        <li>
-          <a href="#services" className="link" onClick={() => setIsOpen(false)}>
-            Services
-          </a>
-        </li>
-        <li>
-          <a href="#contact" className="link" onClick={() => setIsOpen(false)}>
-            Contact
-          </a>
-        </li>
-      </ul>
-    </nav>
+        {/* Collapsible Menu */}
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            {/* Navigation Links */}
+            <Nav.Link as={Link} to="/landing" className="fw-semibold fs-6 fs-md-5 fs-lg-4 fs-xl-3">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/book" className="fw-semibold fs-6 fs-md-5 fs-lg-4 fs-xl-3">
+              Book Now
+            </Nav.Link>
+            <Nav.Link href="#services" className="fw-semibold fs-6 fs-md-5 fs-lg-4 fs-xl-3">
+              Services
+            </Nav.Link>
+            <Nav.Link href="#contact" className="fw-semibold fs-6 fs-md-5 fs-lg-4 fs-xl-3">
+              Contact
+            </Nav.Link>
+
+            {/* Dropdown Menu */}
+            <NavDropdown
+              title="More"
+              id="nav-dropdown"
+              className="fw-semibold fs-6 fs-md-5 fs-lg-4 fs-xl-3"
+            >
+              <NavDropdown.Item href="#about" className="fs-6 fs-md-5 fs-lg-4 fs-xl-3">
+                About Us
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#faq" className="fs-6 fs-md-5 fs-lg-4 fs-xl-3">
+                FAQ
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#feedback" className="fs-6 fs-md-5 fs-lg-4 fs-xl-3">
+                Feedback
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default BootstrapNavbar;

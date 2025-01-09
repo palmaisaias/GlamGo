@@ -6,6 +6,7 @@ import SplashPage from "./pages/SplashPage";
 import LandingPage from "./pages/LandingPage";
 import BookNow from "./pages/BookNow";
 import TechnicianDetail from "./pages/TechnicianDetail";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
