@@ -10,7 +10,7 @@ const BootstrapNavbar = () => {
       <Container>
         {/* Logo */}
         <Navbar.Brand as={Link} to="/landing" className="fw-bold fs-1 fs-md-2 fs-lg-3 fs-xl-4">
-          LashTech
+          GlamGo
         </Navbar.Brand>
 
         {/* Hamburger Icon for Collapsible Menu */}

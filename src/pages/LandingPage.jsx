@@ -14,7 +14,7 @@ const LandingPage = () => {
       <Navbar bg="light" expand="lg" fixed="top">
         <Container>
           <Navbar.Brand as={Link} to="/landing" className="fw-bold">
-            LashTech
+            GlamGo
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -49,7 +49,7 @@ const LandingPage = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="display-4 fw-bold mb-3">Welcome to Lash Services on the Go</h1>
+          <h1 className="display-4 fw-bold mb-3">Welcome to GlamGo lash services</h1>
           <p className="lead mb-4">
             Get professional lash extensions delivered right to your door.
           </p>

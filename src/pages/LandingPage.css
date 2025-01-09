@@ -11,35 +11,49 @@ body, html {
     width: 100%;
 }
 
-/* Hero Section */
 .heroSection {
+    position: relative;
     height: 100vh;
-    background: linear-gradient(to right, #ffe9e9, #ffe3f7);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 20px;
+    background: url('/junior2.jpg') no-repeat center center/cover; /* Background image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    overflow: hidden; /* Prevents content from spilling out */
 }
+
+.heroSection::after {
+    content: ''; /* Necessary for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Inherit the background from .heroSection */
+    filter: blur(10px); /* Apply the blur effect */
+    opacity: 0.6; /* Make it semi-transparent */
+    z-index: -1; /* Ensure it is behind the content */
+}
+
 
 h1 {
     font-size: 3.5rem; /* Larger, bold title for hero section */
     font-weight: bold;
-    color: #333;
+    color: #eae3e3 !important;
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
 p {
     font-size: 1.8rem; /* Clear and readable subtitle */
-    color: #555;
+    color: #eae3e3;
     margin-bottom: 30px;
     line-height: 1.5;
 }
 
 button {
-    background: #ff69b4;
+    background: #e6a0c3;
     color: white;
     padding: 15px 30px;
     border-radius: 50px;
@@ -51,7 +65,7 @@ button {
 }
 
 button:hover {
-    background: #ff47a3;
+    background: #e6a0c3;
     transform: scale(1.05);
 }
 
