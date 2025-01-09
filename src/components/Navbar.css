@@ -90,6 +90,40 @@
     }
 }
 
+@media (max-width: 468px) {
+    .menuIcon {
+        display: block; /* Show hamburger menu */
+        position: relative;
+        padding-left: 23px;
+    }
+
+    .navLinks {
+        flex-direction: column; /* Stack links vertically */
+        position: fixed; /* Fixed positioning for overlay effect */
+        top: 0;
+        right: 0;
+        width: 80%; /* Cover a portion of the screen */
+        max-width: 300px; /* Set a maximum width */
+        height: 100vh;
+        background: #fff;
+        padding: 10px; /* Reduce padding for better alignment */
+        padding-top: 55px;
+        gap: 15px;
+        align-items: flex-end; /* Align links to the start (top-left) */
+        justify-content: flex-start; /* Ensure links start at the top */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+        transform: translateX(100%); /* Hidden off-screen by default */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navLinks.open {
+        transform: translateX(0); /* Slide in from the right */
+    }
+
+    .link {
+        font-size: 1.2rem; /* Slightly larger text for easier tapping */
+    }
+}
 /* Further Adjustments for Screens <= 430px */
 @media (max-width: 430px) {
     .menuIcon {
