@@ -25,7 +25,7 @@ const SplashPage = () => {
         exit={{ opacity: 0, transition: { duration: 1 } }}
       >
         <motion.img
-          src="/lashFIX.png" // Make sure you place a 'logo.png' in your public folder
+          src="/perfected.png" // Make sure you place a 'logo.png' in your public folder
           alt="Lash Logo"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}

@@ -12,10 +12,9 @@ const LoginPage = () => {
         {/* Left Side - Logo */}
         <Col md={6} className="login-left d-flex flex-column justify-content-center align-items-center p-4">
           <Image
-            src="https://via.placeholder.com/150"
+            src="/download4.png"
             alt="GlamGo Logo"
             className="logo mb-4"
-            roundedCircle
           />
           <h2 className="fw-bold text-center">Welcome to GlamGo</h2>
           <p className="text-muted text-center">Your journey to flawless lashes starts here.</p>

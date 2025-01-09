@@ -26,7 +26,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url('/junior2.jpg') no-repeat center center/cover; /* Background image */
+    background: url('/faded.jpg') no-repeat center center/cover; /* Background image */
     background-size: cover; /* Ensures the image covers the entire section */
     overflow: hidden; /* Prevents content from spilling out */
 }

@@ -38,8 +38,9 @@ body {
   }
   
   .logo {
-    max-width: 100px;
-  }
+    max-width: 100px; /* Keeps the size */
+    border-radius: 0; /* Prevents rounding */
+}
   
   /* Right Side - Login Options */
   .login-right {
