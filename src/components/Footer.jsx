@@ -17,8 +17,7 @@ const styles = {
     textAlign: "center",
     background: "#fff",
     padding: "20px",
-    position: "relative",
-    bottom: 0,
+    position: "relative", // Remove fixed positioning for better Flexbox compatibility
     width: "100%",
     boxShadow: "0 -1px 3px rgba(0,0,0,0.1)",
   },

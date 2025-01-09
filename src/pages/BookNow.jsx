@@ -4,6 +4,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 const technicians = [
   {
@@ -16,88 +17,54 @@ const technicians = [
     id: 2,
     name: "Alexa",
     bio: "Professional in lashes for 5+ years.",
-    photoUrl: "https://images.unsplash.com/photo-1527565290982-018bcfdbee74?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdvbWFuJTJDJTIweW91bmclMjBiZWF1dGlmdWx8ZW58MHx8MHx8fDA%3D",
+    photoUrl: "https://images.unsplash.com/photo-1527565290982-018bcfdbee74?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdvbWFuJTJMIJTIweW91bmclMjBiZWF1dGlmdWx8ZW58MHx8MHx8fDA%3D",
   },
   {
     id: 3,
     name: "Michelle",
     bio: "Passionate about beauty.",
-    photoUrl: "https://images.unsplash.com/photo-1533044776621-3fcc98a59622?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fHdvbWFuJTJDJTIweW91bmclMjBiZWF1dGlmdWx8ZW58MHx8MHx8fDA%3D",
+    photoUrl: "https://images.unsplash.com/photo-1533044776621-3fcc98a59622?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fHdvbWFuJTJMIJTIweW91bmclMjBiZWF1dGlmdWx8ZW58MHx8MHx8fDA%3D",
   },
 ];
 
 const BookNow = () => {
   return (
-    <div style={styles.wrapper}>
+    <div className="d-flex flex-column min-vh-100">
       <Navbar />
-      <div style={styles.container}>
-        <h1>Choose Your Lash Technician</h1>
-        <div style={styles.techList}>
+      <Container className="flex-grow-1 text-center mt-5">
+        <h1 className="fw-bold fs-2 fs-md-1">Choose Your Lash Technician</h1>
+        <Row className="mt-4">
           {technicians.map((tech) => (
-            <div key={tech.id} style={styles.techCard}>
-              <img
-                src={tech.photoUrl}
-                alt={tech.name}
-                style={styles.techPhoto}
-              />
-              <h2>{tech.name}</h2>
-              <p>{tech.bio}</p>
-              <Link to={`/technician/${tech.id}`} style={{ textDecoration: "none" }}>
-                <button style={styles.selectButton}>Select</button>
-              </Link>
-            </div>
+            <Col xs={12} sm={6} md={4} className="mb-4" key={tech.id}>
+              <Card className="shadow border-0 h-100">
+                <Card.Img
+                  variant="top"
+                  src={tech.photoUrl}
+                  alt={tech.name}
+                  className="rounded-circle mx-auto mt-3"
+                  style={{
+                    width: "100px",
+                    height: "100px",
+                    objectFit: "cover",
+                  }}
+                />
+                <Card.Body className="text-center">
+                  <Card.Title className="fw-bold fs-4">{tech.name}</Card.Title>
+                  <Card.Text className="text-muted">{tech.bio}</Card.Text>
+                  <Link to={`/technician/${tech.id}`}>
+                    <Button variant="primary" className="rounded-pill fs-6">
+                      Select
+                    </Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+            </Col>
           ))}
-        </div>
-      </div>
+        </Row>
+      </Container>
       <Footer />
     </div>
   );
 };
-
-const styles = {
-    wrapper: {
-      display: "flex", // Enables flexbox
-      flexDirection: "column", // Stack content vertically
-      minHeight: "100vh", // Ensures the wrapper takes the full height of the viewport
-      paddingTop: "60px", // Keeps content below the navbar
-    },
-    container: {
-      flex: 1, // Ensures the main content takes up available space
-      textAlign: "center",
-      marginTop: "40px",
-    },
-    techList: {
-      display: "flex",
-      justifyContent: "center",
-      flexWrap: "wrap",
-      gap: "20px",
-      marginTop: "30px",
-    },
-    techCard: {
-      background: "#fff",
-      borderRadius: "10px",
-      width: "200px",
-      padding: "20px",
-      marginBottom: "0px",
-      boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-    },
-    techPhoto: {
-      width: "100px",
-      height: "100px",
-      borderRadius: "50%",
-      objectFit: "cover",
-    },
-    selectButton: {
-      marginTop: "10px",
-      padding: "10px 20px",
-      marginBottom: "20px",
-      background: "#FF99CC",
-      color: "#fff",
-      border: "none",
-      borderRadius: "20px",
-      cursor: "pointer",
-      fontWeight: 600,
-    },
-  };
 
 export default BookNow;

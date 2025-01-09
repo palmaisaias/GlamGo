@@ -27,13 +27,11 @@ const TechnicianDetail = () => {
     }
   };
 
-  // If you have an array of technicians somewhere, you could grab the name here.
-  // For simplicity, we'll just call them "Technician #1, #2, #3", etc.
   return (
     <div style={styles.wrapper}>
       <Navbar />
-      <div style={styles.container}>
-        <h1>Technician {id} Schedule</h1>
+      <main style={styles.container}>
+        <h1 className="fw-bold fs-2 fs-md-1">Technician {id} Schedule</h1>
         <h3>Please select an available time slot:</h3>
         <div style={styles.slots}>
           {sampleSchedules[id].map((slot) => (
@@ -53,7 +51,7 @@ const TechnicianDetail = () => {
         <button style={styles.bookButton} onClick={handleBookNow}>
           Book Now
         </button>
-      </div>
+      </main>
 
       {/* Celebratory Popup */}
       <AnimatePresence>
@@ -89,10 +87,13 @@ const TechnicianDetail = () => {
 
 const styles = {
   wrapper: {
-    paddingTop: "60px",
-    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh", // Ensures the page takes up the full viewport height
   },
   container: {
+    flexGrow: 1, // Allows the content to fill the available space
+    textAlign: "center",
     marginTop: "40px",
   },
   slots: {
