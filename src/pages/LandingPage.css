@@ -48,14 +48,19 @@ body, html {
 h1 {
     font-size: 3.5rem; /* Larger, bold title for hero section */
     font-weight: bold;
-    color: #f0f0f0 !important;
+    color: #333 !important;
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
+.hero-tit,
+.hero-titty {
+    color: #fafafa !important;
+}
+
 p {
     font-size: 1.8rem; /* Clear and readable subtitle */
-    color: #f0f0f0;
+    color: #333;
     margin-bottom: 30px;
     line-height: 1.5;
 }
