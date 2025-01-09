@@ -1,0 +1,24 @@
+/* lash-app/src/index.css */
+
+/* Use the Poppins font for everything */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #fafafa;
+}
+
+/* Basic styling for buttons, etc. */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+/* Hide scrollbar on modern browsers (optional) */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}

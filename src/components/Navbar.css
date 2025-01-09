@@ -1,0 +1,90 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 0 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+  
+  .logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  .menuIcon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none; /* Hidden by default, shown on small screens */
+    z-index: 1000;
+  }
+  
+  .navLinks {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 20 0;
+    flex-direction: row; /* Keep links horizontal */
+    justify-content: flex-start; /* Align links to the left */
+    align-items: center; /* Vertically center the links */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  /* Responsive styles for screens <= 768px */
+  @media (max-width: 768px) {
+    .menuIcon {
+      display: block;
+      position: absolute; /* Position it relative to the navbar */
+      top: 15px; /* Adjust vertically inside the navbar */
+      right: 50px; /* Keep it closer to the right edge */
+      z-index: 1000; /* Ensure it stays above other elements */
+      cursor: pointer;
+    }
+  
+    .navLinks {
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 100vh;
+      background: #fff;
+      padding: 20px;
+      gap: 15px;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transform: translateX(100%); /* Hidden off-screen by default */
+    }
+  
+    /* When menu is open, slide it into view */
+    .navLinks.open {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Additional adjustments for screens <= 430px */
+  @media (max-width: 430px) {
+    .link {
+      font-size: 1.2rem;
+    }
+  
+    .menuIcon {
+      font-size: 2rem;
+    }
+  }
