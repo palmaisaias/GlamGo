@@ -86,68 +86,72 @@ const TechnicianDetail = () => {
 };
 
 const styles = {
-  wrapper: {
-    display: "flex",
-    flexDirection: "column",
-    minHeight: "100vh", // Ensures the page takes up the full viewport height
-  },
-  container: {
-    flexGrow: 1, // Allows the content to fill the available space
-    textAlign: "center",
-    marginTop: "40px",
-  },
-  slots: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "10px",
-    alignItems: "center",
-    marginTop: "20px",
-  },
-  slotButton: {
-    padding: "10px 20px",
-    borderRadius: "20px",
-    border: "none",
-    cursor: "pointer",
-    fontWeight: 500,
-  },
-  bookButton: {
-    marginTop: "20px",
-    padding: "10px 20px",
-    borderRadius: "20px",
-    border: "none",
-    cursor: "pointer",
-    background: "#FF99CC",
-    color: "#fff",
-    fontWeight: 600,
-  },
-  popupOverlay: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    width: "100vw",
-    height: "100vh",
-    background: "rgba(0,0,0,0.5)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    zIndex: 999,
-  },
-  popupContent: {
-    background: "#fff",
-    padding: "30px",
-    borderRadius: "10px",
-    textAlign: "center",
-  },
-  closePopup: {
-    marginTop: "20px",
-    padding: "10px 20px",
-    borderRadius: "20px",
-    border: "none",
-    cursor: "pointer",
-    background: "#FF99CC",
-    color: "#fff",
-    fontWeight: 600,
-  },
-};
+    wrapper: {
+      display: "flex",
+      flexDirection: "column",
+      minHeight: "100vh", // Ensures the page takes up the full viewport height
+    },
+    container: {
+      flexGrow: 1, // Allows the content to fill the available space
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center", // Centers content horizontally
+      justifyContent: "center", // Centers content vertically
+      textAlign: "center",
+      marginTop: "40px", // You can adjust or remove this if not needed
+    },
+    slots: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "10px",
+      alignItems: "center",
+      marginTop: "20px", // Adjust this for spacing between the heading and buttons
+    },
+    slotButton: {
+      padding: "10px 20px",
+      borderRadius: "20px",
+      border: "none",
+      cursor: "pointer",
+      fontWeight: 500,
+    },
+    bookButton: {
+      marginTop: "20px",
+      padding: "10px 20px",
+      borderRadius: "20px",
+      border: "none",
+      cursor: "pointer",
+      background: "#FF99CC",
+      color: "#fff",
+      fontWeight: 600,
+    },
+    popupOverlay: {
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100vw",
+      height: "100vh",
+      background: "rgba(0,0,0,0.5)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      zIndex: 999,
+    },
+    popupContent: {
+      background: "#fff",
+      padding: "30px",
+      borderRadius: "10px",
+      textAlign: "center",
+    },
+    closePopup: {
+      marginTop: "20px",
+      padding: "10px 20px",
+      borderRadius: "20px",
+      border: "none",
+      cursor: "pointer",
+      background: "#FF99CC",
+      color: "#fff",
+      fontWeight: 600,
+    },
+  };
 
 export default TechnicianDetail;
