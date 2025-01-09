@@ -3,24 +3,31 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import "./Navbar.css";  // Import the CSS file
+import "./Navbar.css"; // Import the CSS file
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  // Toggle menu open/close state
+  const toggleMenu = () => {
+    setIsOpen((prevState) => !prevState);
+  };
 
   return (
     <nav className="navbar">
+      {/* Logo Section */}
       <div className="logo">
-        {/* Replace with your logo or brand name */}
         <Link to="/landing" style={{ textDecoration: "none", color: "#000" }}>
           LashTech
         </Link>
       </div>
+
+      {/* Hamburger Icon */}
       <div className="menuIcon" onClick={toggleMenu}>
         {isOpen ? <FaTimes /> : <FaBars />}
       </div>
+
+      {/* Navigation Links */}
       <ul className={`navLinks ${isOpen ? "open" : ""}`}>
         <li>
           <Link to="/landing" className="link" onClick={() => setIsOpen(false)}>

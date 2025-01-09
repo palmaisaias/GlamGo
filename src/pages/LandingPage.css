@@ -1,0 +1,182 @@
+/* lash-app/src/pages/LandingPage.css */
+
+/* General Reset */
+.wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hero Section */
+  .heroSection {
+    height: 100vh;
+    background: linear-gradient(to right, #ffe9e9, #ffe3f7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+  }
+  
+  .heroTitle {
+    font-size: 7vw;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+  }
+  
+  .heroSubtitle {
+    font-size: 4.5vw;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  
+  .bookNowButton {
+    background: #ff99cc;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 4.5vw;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .bookNowButton:hover {
+    background: #ff80b0;
+    transform: scale(1.05);
+  }
+  
+  /* Info Section */
+  .infoSection {
+    padding: 10% 5%;
+    text-align: center;
+  }
+  
+  .imagePlaceholder {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Contact Form */
+  .contactForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .formInput {
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .formTextarea {
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .submitButton {
+    background: #ff99cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submitButton:hover {
+    background: #ff80b0;
+    transform: scale(1.05);
+  }
+  
+  /* Link Styling */
+  .link {
+    text-decoration: none;
+  }
+  
+  /* Mobile-First Adjustments */
+  @media screen and (max-width: 1290px) {
+    .heroTitle {
+      font-size: 6.5vw;
+    }
+  
+    .heroSubtitle {
+      font-size: 4vw;
+    }
+  
+    .bookNowButton {
+      font-size: 4vw;
+      padding: 10px 18px;
+    }
+  
+    .infoSection {
+      padding: 8% 5%;
+    }
+  
+    .formInput, .formTextarea {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .submitButton {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
+  /* Fine-Tuning for iPhone 15 Pro Max */
+  @media screen and (device-width: 1290px) and (device-height: 2796px) and (-webkit-device-pixel-ratio: 3) {
+    .heroTitle {
+      font-size: 6vw;
+      margin-bottom: 8px;
+    }
+  
+    .heroSubtitle {
+      font-size: 4vw;
+      margin-bottom: 15px;
+    }
+  
+    .bookNowButton {
+      font-size: 3.8vw;
+      padding: 10px 16px;
+    }
+  
+    .image {
+      width: 85%;
+    }
+  
+    .formInput, .formTextarea {
+      width: 95%;
+      max-width: 500px;
+      padding: 12px;
+      font-size: 15px;
+    }
+  
+    .submitButton {
+      padding: 10px 18px;
+      font-size: 15px;
+    }
+  }
