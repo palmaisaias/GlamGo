@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
 /* General Reset */
 body, html {
     margin: 0;
@@ -11,6 +12,13 @@ body, html {
     width: 100%;
 }
 
+.glamgo {
+    font-family: 'Birthstone', cursive; /* Apply the Birthstone font */
+    font-size: 4rem; /* Adjust size as needed */
+    color: #e6a0c3; /* Optional: Change the color */
+    letter-spacing: 1px; /* Optional: Adjust letter spacing for style */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for effect */
+}
 .heroSection {
     position: relative;
     height: 100vh;
@@ -40,14 +48,14 @@ body, html {
 h1 {
     font-size: 3.5rem; /* Larger, bold title for hero section */
     font-weight: bold;
-    color: #eae3e3 !important;
+    color: #f0f0f0 !important;
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
 p {
     font-size: 1.8rem; /* Clear and readable subtitle */
-    color: #eae3e3;
+    color: #f0f0f0;
     margin-bottom: 30px;
     line-height: 1.5;
 }

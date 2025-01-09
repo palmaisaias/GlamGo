@@ -49,7 +49,7 @@ const LandingPage = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="display-4 fw-bold mb-3">Welcome to GlamGo lash services</h1>
+          <h1 className="display-4 fw-bold mb-3">Welcome to <span className="glamgo">GlamGo</span></h1>
           <p className="lead mb-4">
             Get professional lash extensions delivered right to your door.
           </p>
