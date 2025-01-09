@@ -26,6 +26,9 @@ const BootstrapNavbar = () => {
             <Nav.Link as={Link} to="/book" className="fw-semibold fs-6 fs-md-5 fs-lg-4 fs-xl-3">
               Book Now
             </Nav.Link>
+            <Nav.Link as={Link} to="/login" className="fw-semibold fs-6 fs-md-5 fs-lg-4 fs-xl-3">
+              Log In
+            </Nav.Link>
             <Nav.Link href="#services" className="fw-semibold fs-6 fs-md-5 fs-lg-4 fs-xl-3">
               Services
             </Nav.Link>

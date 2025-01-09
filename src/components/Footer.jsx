@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer style={styles.footer}>
       <p style={{ margin: 0 }}>
-        © {new Date().getFullYear()} Lash Business. All rights reserved.
+        © {new Date().getFullYear()} GlamGo. All rights reserved.
       </p>
     </footer>
   );

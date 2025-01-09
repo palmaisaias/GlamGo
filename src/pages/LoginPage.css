@@ -1,0 +1,128 @@
+/* LoginPage.css */
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffffff 50%, #f3f3f3 50%);
+  }
+  
+  /* Login Container */
+  .login-container {
+    max-width: 900px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  /* Left Side - Logo */
+  .login-left {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    text-align: center;
+  }
+  
+  .login-left h2 {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+  }
+  
+  .login-left p {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
+  
+  .logo {
+    max-width: 100px;
+  }
+  
+  /* Right Side - Login Options */
+  .login-right {
+    background-color: white;
+  }
+  
+  .login-right h3 {
+    font-size: 1.5rem;
+    color: #333333;
+  }
+  
+  .form-label {
+    font-weight: 600;
+  }
+  
+  button {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background-color: #ff758c;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff4e6a;
+  }
+  
+  .btn-outline-primary {
+    color: #ff758c;
+    border-color: #ff758c;
+  }
+  
+  .btn-outline-primary:hover {
+    color: white;
+    background-color: #ff758c;
+  }
+  
+  .btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-outline-secondary:hover {
+    color: white;
+    background-color: #6c757d;
+  }
+  
+  /* Link Styling */
+  .text-primary {
+    color: #ff758c !important;
+    font-weight: 500;
+  }
+  
+  .text-primary:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+    }
+  
+    .login-left {
+      padding: 2rem;
+    }
+  
+    .login-right {
+      padding: 2rem;
+    }
+  
+    .logo {
+      max-width: 75px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 0.85rem;
+    }
+  }

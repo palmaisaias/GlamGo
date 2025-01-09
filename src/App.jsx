@@ -6,6 +6,7 @@ import SplashPage from "./pages/SplashPage";
 import LandingPage from "./pages/LandingPage";
 import BookNow from "./pages/BookNow";
 import TechnicianDetail from "./pages/TechnicianDetail";
+import LoginPage from "./pages/LoginPage"
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
       
       {/* Landing Page after splash */}
       <Route path="/landing" element={<LandingPage />} />
+
+      <Route path="/login" element={<LoginPage />} />
       
       {/* Book Now page listing all technicians */}
       <Route path="/book" element={<BookNow />} />

@@ -3,44 +3,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Navbar, Nav, Container, NavDropdown, Button, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import Navbar from "../components/Navbar"; // Import the Navbar component
 import Footer from "../components/Footer";
 import "./LandingPage.css";
 
 const LandingPage = () => {
   return (
     <div className="wrapper">
-      {/* Bootstrap Navbar */}
-      <Navbar bg="light" expand="lg" fixed="top">
-        <Container>
-          <Navbar.Brand as={Link} to="/landing" className="fw-bold">
-            GlamGo
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link as={Link} to="/landing" className="fw-semibold">
-                Home
-              </Nav.Link>
-              <Nav.Link as={Link} to="/book" className="fw-semibold">
-                Book Now
-              </Nav.Link>
-              <Nav.Link href="#services" className="fw-semibold">
-                Services
-              </Nav.Link>
-              <Nav.Link href="#contact" className="fw-semibold">
-                Contact
-              </Nav.Link>
-              <NavDropdown title="More" id="nav-dropdown" className="fw-semibold">
-                <NavDropdown.Item href="#about">About Us</NavDropdown.Item>
-                <NavDropdown.Item href="#faq">FAQ</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#feedback">Feedback</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      {/* Use Navbar Component */}
+      <Navbar />
 
       {/* Hero Section */}
       <Container fluid className="heroSection text-center bg-light py-5">
@@ -49,7 +21,9 @@ const LandingPage = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="display-4 fw-bold mb-3 hero-tit">Welcome to <span className="glamgo">GlamGo</span></h1>
+          <h1 className="display-4 fw-bold mb-3 hero-tit">
+            Welcome to <span className="glamgo">GlamGo</span>
+          </h1>
           <p className="lead mb-4 hero-titty">
             Get professional lash extensions delivered right to your door.
           </p>
